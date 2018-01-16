@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-card.area-card{
+
+    box-shadow: 0 2px 15px -5px #5cbcb9;
+    transition: 0.3s;    
+    
+    &:hover{
+        transition: 0.3s;
+        box-shadow: 0 5px 30px -10px #5cbcb9;
+
+    }
+
+}

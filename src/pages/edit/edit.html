@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 offset-3>
+
+        <ng-container *ngFor="let area of areas">
+
+          <ion-card class="area-card">
+            <ion-card-header>
+
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-8>
+                    <h2>{{ area.title }}</h2>
+                  </ion-col>
+                  <ion-col col-4>
+                    <h2>{{ area.score }}</h2>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </ion-card-header>
+            <ion-card-content>
+
+              <ion-item>
+                <ion-range min="0" max="10" step="1" [(ngModel)]="area.score">
+                  <ion-icon range-left small name="0"></ion-icon>
+                  <ion-icon range-right name="10"></ion-icon>
+                </ion-range>
+              </ion-item>
+
+            </ion-card-content>
+          </ion-card>
+
+        </ng-container>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="GoToAdd()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

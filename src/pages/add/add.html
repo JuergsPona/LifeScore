@@ -1,0 +1,46 @@
+<ion-header no-border>
+
+  <!-- <ion-navbar>
+    <ion-title>Add</ion-title>
+  </ion-navbar>
+
+  <ion-buttons end>
+    <button ion-button icon-only (click)="CloseModalView()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons> -->
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <div class="table-view">
+    <div class="table-row">
+      <div class="table-cell">
+
+      </div>
+    </div>
+  </div> -->
+
+  <h1>Add a new life area</h1>
+
+  <ion-item>
+    <ion-label floating></ion-label>
+    <ion-input type="text" [(ngModel)]="areaTitle" (input)="CheckInput($event)"></ion-input>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer no-border>
+  <ion-navbar>
+  
+    <ion-buttons end>
+      
+      <button color="neutral" ion-button clear (click)="CloseModalView()">Cancel</button>
+      <button ion-button [disabled]="isTitleBlank" (click)="AddNewArea()">Add</button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-footer>
